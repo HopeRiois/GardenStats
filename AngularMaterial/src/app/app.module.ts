@@ -6,11 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import { MaterialModule } from './material/material.module';
+import { PlantasComponent } from './plantas/plantas.component';
+import { HomeComponent } from './home/home.component';
+import { CrecimientoComponent } from './crecimiento/crecimiento.component';
+import { InformeComponent } from './informe/informe.component';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlantasComponent,
+    HomeComponent,
+    CrecimientoComponent,
+    InformeComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

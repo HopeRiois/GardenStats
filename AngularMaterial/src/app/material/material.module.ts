@@ -4,6 +4,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
 
 
 const MaterialComponents = [
@@ -11,7 +15,11 @@ const MaterialComponents = [
   MatSidenavModule,
   MatMenuModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatGridListModule,
+  MatToolbarModule,
+  MatTableModule,
+  MatCardModule
 ]
 
 @NgModule({
@@ -21,14 +29,22 @@ const MaterialComponents = [
     MatSidenavModule,
     MatMenuModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatCardModule
   ],
   exports:[
     MatButtonModule,
     MatSidenavModule,
     MatMenuModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }

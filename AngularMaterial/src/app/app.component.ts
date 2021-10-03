@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'AngularMaterial';
   opened = false;
+  constructor(private router:Router){};
+  plantas(){
+    this.router.navigate(["plantas"])
+  }
+  home(){
+    this.router.navigate(["home"])
+  }
+  crecimiento(){
+    this.router.navigate(["crecimiento"])
+  }
+  informe(){
+    this.router.navigate(["informe"])
+  }
+  info(){
+    this.router.navigate(["info"])
+  }
 }

@@ -2,21 +2,36 @@
   <mat-sidenav [(opened)] = "opened">
     <img src="assets/GardenStats.png">
     <mat-list role="list">
-      <mat-list-item role="listitem"><button mat-raised-button>Inicio</button></mat-list-item>
-      <mat-list-item role="listitem"><button mat-raised-button>Plantas</button></mat-list-item>
-      <mat-list-item role="listitem"><button mat-raised-button>Agregar crecimiento</button></mat-list-item>
-      <mat-list-item role="listitem"><button mat-raised-button>Informe estadístico</button></mat-list-item>
-      <mat-list-item role="listitem"><button mat-raised-button>Acerda de</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click) = "home()">Inicio</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click) = "plantas()">Plantas</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click) = "crecimiento()">Agregar crecimiento</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click) = "informe()">Informe estadístico</button></mat-list-item>
+      <mat-list-item role="listitem"><button mat-button (click) = "info()">Acerda de</button></mat-list-item>
     </mat-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <button mat-raised-button (click)="opened=!opened">
-      Abrir
-    </button>
-    <mat-list role="list">
-      <mat-list-item role="listitem">Item 1</mat-list-item>
-      <mat-list-item role="listitem">Item 2</mat-list-item>
-      <mat-list-item role="listitem">Item 3</mat-list-item>
-    </mat-list>
+  <mat-sidenav-content id="contenido">
+    <mat-toolbar id="toolbar">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened=!opened">
+       <mat-icon>menu</mat-icon>
+     </button>
+     <span>GardenStats</span>
+    </mat-toolbar>
+    <div id="routercontent">
+    <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<footer>
+  <mat-grid-list cols="2" rowHeight="3em" id = "footer">
+    <mat-grid-tile rowspan = "3">
+      <mat-list role="list">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile colspan="2" id = "copy">Garden Stats - 2021</mat-grid-tile>
+  </mat-grid-list>
+</footer>

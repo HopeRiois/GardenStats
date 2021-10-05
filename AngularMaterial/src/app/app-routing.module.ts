@@ -21,7 +21,16 @@ const routes: Routes = [
   },
   {
     path: 'info',component:InfoComponent
+  },
+  
+  {
+    path: "", redirectTo: "/home", pathMatch: "full"}, {path:"**", redirectTo: "/home"
+  },
+
+  {
+    path:"**", redirectTo: "/home"
   }
+
 ];
 
 @NgModule({

@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-plantas',
-  templateUrl: './plantas.component.html',
-  styleUrls: ['./plantas.component.css']
+  selector: 'app-agregar-planta',
+  templateUrl: './agregar-planta.component.html',
+  styleUrls: ['./agregar-planta.component.css']
 })
-
-export class PlantasComponent{
-
+export class AgregarPlantaComponent{
+  
   constructor(private router:Router){}ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -23,4 +22,3 @@ export class PlantasComponent{
     this.router.navigate(["eliminarplanta"])
   }
 }
-

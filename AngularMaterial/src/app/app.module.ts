@@ -11,6 +11,12 @@ import { HomeComponent } from './home/home.component';
 import { CrecimientoComponent } from './crecimiento/crecimiento.component';
 import { InformeComponent } from './informe/informe.component';
 import { InfoComponent } from './info/info.component';
+import { AgregarPlantaComponent } from './plantas/agregar-planta/agregar-planta.component';
+import { EliminarPlantaComponent } from './plantas/eliminar-planta/eliminar-planta.component';
+import { EditarPlantaComponent } from './plantas/editar-planta/editar-planta.component';
+import { AgregarCrecimientoComponent } from './crecimiento/agregar-crecimiento/agregar-crecimiento.component';
+import { EditarCrecimientoComponent } from './crecimiento/editar-crecimiento/editar-crecimiento.component';
+import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento/eliminar-crecimiento.component';
 
 
 @NgModule({
@@ -20,7 +26,13 @@ import { InfoComponent } from './info/info.component';
     HomeComponent,
     CrecimientoComponent,
     InformeComponent,
-    InfoComponent
+    InfoComponent,
+    AgregarPlantaComponent,
+    EliminarPlantaComponent,
+    EditarPlantaComponent,
+    AgregarCrecimientoComponent,
+    EditarCrecimientoComponent,
+    EliminarCrecimientoComponent,
   ],
   imports: [
     BrowserModule,

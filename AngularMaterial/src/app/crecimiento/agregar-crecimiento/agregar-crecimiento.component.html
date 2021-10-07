@@ -1,36 +1,25 @@
 <h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+<button mat-raised-button [matMenuTriggerFor]="menu" class="perro">Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item (click) = "agregarcrecimiento()">Agregar crecimiento</button>
   <button mat-menu-item (click) = "modificarcrecimiento()">Modificar crecimiento</button>
   <button mat-menu-item (click) = "eliminarcrecimiento()">Eliminar crecimiento</button>
 </mat-menu>
-<h2>Agregar crecimiento</h2>
-<form>
-    <p>
-        <mat-form-field>
-            <input matInput name="nombre" 
-                type="text"
-                placeholder="Nombre">
+<div class="formulario">
+    <h2>Agregar crecimiento</h2>
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Planta</mat-label>
+            <input matInput placeholder="Planta">
         </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field>
-            <input matInput name="planta" 
-                type="text"
-                placeholder="Planta">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Medición</mat-label>
+            <input matInput placeholder="Medición" type="number" value="0">
         </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field>
-            <input matInput name="medicion"
-                type="number"
-                placeholder="Medicion">
-        </mat-form-field>
-    </p>
-    <p>
-        <button type="submit" (click) = "crecimiento()" mat-flat-button color="accent" >Guardar</button>
-        
-        <button (click) = "crecimiento()" mat-flat-button color="white">cancelar</button>
-    </p>
-</form>
+        <div class="example-button-container">
+            <button type="submit" (click) = "crecimiento()" mat-flat-button color="accent" >Guardar</button>
+            <hr>
+            <button (click) = "crecimiento()" mat-flat-button color="white">cancelar</button>
+        </div>
+    </form>
+</div>

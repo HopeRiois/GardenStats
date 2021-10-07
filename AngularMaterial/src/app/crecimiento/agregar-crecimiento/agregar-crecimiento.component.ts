@@ -21,4 +21,7 @@ export class AgregarCrecimientoComponent{
   eliminarcrecimiento(){
     this.router.navigate(["eliminarcrecimiento"])
   }
+  crecimiento(){
+    this.router.navigate(["crecimiento"])
+  }
 }

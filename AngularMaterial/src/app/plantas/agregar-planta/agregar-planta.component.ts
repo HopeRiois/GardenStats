@@ -21,4 +21,7 @@ export class AgregarPlantaComponent{
   eliminarplanta(){
     this.router.navigate(["eliminarplanta"])
   }
+  plantas(){
+    this.router.navigate(["plantas"])
+  }
 }

@@ -5,3 +5,52 @@
   <button mat-menu-item (click) = "modificarplanta()">Modificar planta</button>
   <button mat-menu-item (click) = "eliminarplanta()">Eliminar planta</button>
 </mat-menu>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
+<div class="section container">    
+<div class="card-panel grey lighten-4" style="width: 1000px;">
+	<table class="highlight centered">
+		<thead>
+			<tr>
+				<th>ID_planta</th>
+        <th>Nombre</th>
+				<th>Regar</th>
+				<th>Luz</th>
+			</tr>
+		</thead>
+        <tbody>
+			<tr>
+				<td>1</td>
+				<td>Tomate</td>
+				<td>si</td>
+				<td>no</td>
+				<td>
+                    <button  (click)="modificarplanta()" class="btn btn-info">
+		                <i class="material-icons">edit</i>
+	                </button>
+                    <button (click)="eliminarplanta()" class="btn btn-info" style="margin-left: 50px;">
+		                <i class="material-icons">remove</i>
+	                </button>
+				</td>
+			</tr>
+      <tr>
+				<td>2</td>
+				<td>Pepino</td>
+				<td>no</td>
+				<td>no</td>
+				<td>
+                    <button  (click)="modificarplanta()" class="btn btn-info">
+		                <i class="material-icons">edit</i>
+	                </button>
+                    <button (click)="eliminarplanta()" class="btn btn-info" style="margin-left: 50px;">
+		                <i class="material-icons">remove</i>
+	                </button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/js/materialize.min.js" integrity="sha256-SrBfGi+Zp2LhAvy9M1bWOCXztRU9Ztztxmu5BcYPcPE=" crossorigin="anonymous"></script>

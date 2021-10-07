@@ -5,4 +5,32 @@
   <button mat-menu-item (click) = "modificarcrecimiento()">Modificar crecimiento</button>
   <button mat-menu-item (click) = "eliminarcrecimiento()">Eliminar crecimiento</button>
 </mat-menu>
-<p>agregar-crecimiento works!</p>
+<h2>Agregar crecimiento</h2>
+<form>
+    <p>
+        <mat-form-field>
+            <input matInput name="nombre" 
+                type="text"
+                placeholder="Nombre">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput name="planta" 
+                type="text"
+                placeholder="Planta">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput name="medicion"
+                type="number"
+                placeholder="Medicion">
+        </mat-form-field>
+    </p>
+    <p>
+        <button type="submit" (click) = "crecimiento()" mat-flat-button color="accent" >Guardar</button>
+        
+        <button (click) = "crecimiento()" mat-flat-button color="white">cancelar</button>
+    </p>
+</form>

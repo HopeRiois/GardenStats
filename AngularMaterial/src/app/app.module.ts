@@ -17,6 +17,7 @@ import { EditarPlantaComponent } from './plantas/editar-planta/editar-planta.com
 import { AgregarCrecimientoComponent } from './crecimiento/agregar-crecimiento/agregar-crecimiento.component';
 import { EditarCrecimientoComponent } from './crecimiento/editar-crecimiento/editar-crecimiento.component';
 import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento/eliminar-crecimiento.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

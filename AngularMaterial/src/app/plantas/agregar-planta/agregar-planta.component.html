@@ -5,4 +5,33 @@
   <button mat-menu-item (click) = "modificarplanta()">Modificar planta</button>
   <button mat-menu-item (click) = "eliminarplanta()">Eliminar planta</button>
 </mat-menu>
-<p>agregar-planta works!</p>
+
+<h2>Agregar planta</h2>
+<form>
+    <p>
+        <mat-form-field>
+            <input matInput name="nombre" 
+                type="text"
+                placeholder="Nombre">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput name="regar" 
+                type="number"
+                placeholder="Regar">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput name="luz"
+                type="number"
+                placeholder="Luz">
+        </mat-form-field>
+    </p>
+    <p>
+        <button type="submit" (click) = "plantas()" mat-flat-button color="accent">Guardar</button>
+        
+        <button (click) = "plantas()" mat-flat-button color="white">cancelar</button>
+    </p>
+</form>

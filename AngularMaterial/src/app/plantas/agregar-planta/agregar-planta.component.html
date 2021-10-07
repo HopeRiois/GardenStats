@@ -1,37 +1,23 @@
-<h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click) = "agregarplanta()">Agregar planta</button>
-  <button mat-menu-item (click) = "modificarplanta()">Modificar planta</button>
-  <button mat-menu-item (click) = "eliminarplanta()">Eliminar planta</button>
-</mat-menu>
-
 <h2>Agregar planta</h2>
-<form>
-    <p>
-        <mat-form-field>
-            <input matInput name="nombre" 
+<div mat-dialog-content>
+  <p>Escriba el ID de la planta</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: 1</mat-label>
+    <input matInput name="id" 
+                type="number"
+                placeholder="ID">
+  </mat-form-field>
+</div>
+<div mat-dialog-content>
+  <p>Escriba el nombre de la planta a agregar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: tomato</mat-label>
+    <input matInput name="nombre" 
                 type="text"
                 placeholder="Nombre">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field>
-            <input matInput name="regar" 
-                type="number"
-                placeholder="Regar">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field>
-            <input matInput name="luz"
-                type="number"
-                placeholder="Luz">
-        </mat-form-field>
-    </p>
-    <p>
-        <button type="submit" (click) = "plantas()" mat-flat-button color="accent">Guardar</button>
-        
-        <button (click) = "plantas()" mat-flat-button color="white">cancelar</button>
-    </p>
-</form>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close="true">Agregar</button>
+  <button mat-button mat-dialog-close>Cancelar</button>
+</div>

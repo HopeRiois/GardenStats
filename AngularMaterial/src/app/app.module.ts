@@ -18,6 +18,7 @@ import { AgregarCrecimientoComponent } from './crecimiento/agregar-crecimiento/a
 import { EditarCrecimientoComponent } from './crecimiento/editar-crecimiento/editar-crecimiento.component';
 import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento/eliminar-crecimiento.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -35,13 +36,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     EditarCrecimientoComponent,
     EliminarCrecimientoComponent,
   ],
+  entryComponents: [
+    EliminarPlantaComponent,
+    EliminarCrecimientoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDialogModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

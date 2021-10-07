@@ -12,16 +12,4 @@ export class AgregarPlantaComponent{
     throw new Error('Method not implemented.');
   }
 ;
-  agregarplanta(){
-    this.router.navigate(["agregarplanta"])
-  }
-  modificarplanta(){
-    this.router.navigate(["editarplanta"])
-  }
-  eliminarplanta(){
-    this.router.navigate(["eliminarplanta"])
-  }
-  plantas(){
-    this.router.navigate(["plantas"])
-  }
 }

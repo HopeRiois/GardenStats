@@ -1,25 +1,32 @@
-<h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu" class="perro">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click) = "agregarcrecimiento()">Agregar crecimiento</button>
-  <button mat-menu-item (click) = "modificarcrecimiento()">Modificar crecimiento</button>
-  <button mat-menu-item (click) = "eliminarcrecimiento()">Eliminar crecimiento</button>
-</mat-menu>
-<div class="formulario">
-    <h2>Agregar crecimiento</h2>
-    <form class="example-form">
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Planta</mat-label>
-            <input matInput placeholder="Planta">
-        </mat-form-field>
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Medición</mat-label>
-            <input matInput placeholder="Medición" type="number" value="0">
-        </mat-form-field>
-        <div class="example-button-container">
-            <button type="submit" (click) = "crecimiento()" mat-flat-button color="accent" >Guardar</button>
-            <hr>
-            <button (click) = "crecimiento()" mat-flat-button color="white">cancelar</button>
-        </div>
-    </form>
+<h2>Registrar crecimiento</h2>
+<div mat-dialog-content>
+  <p>Escriba el ID de la planta</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: 1</mat-label>
+    <input matInput name="id" 
+                type="number"
+                placeholder="ID">
+  </mat-form-field>
+</div>
+<div mat-dialog-content>
+  <p>Escriba valor del registro en cm</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: 20</mat-label>
+    <input matInput name="valor" 
+                type="number"
+                placeholder="valor">
+  </mat-form-field>
+</div>
+<div mat-dialog-content>
+  <p>Fecha del registro</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: 07/10/2021</mat-label>
+    <input matInput name="nombre" 
+                type="date"
+                placeholder="Nombre">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close="true">Agregar</button>
+  <button mat-button mat-dialog-close>Cancelar</button>
 </div>

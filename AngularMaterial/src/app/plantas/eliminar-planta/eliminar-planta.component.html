@@ -1,8 +1,7 @@
-<h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click) = "agregarplanta()">Agregar planta</button>
-  <button mat-menu-item (click) = "modificarplanta()">Modificar planta</button>
-  <button mat-menu-item (click) = "eliminarplanta()">Eliminar planta</button>
-</mat-menu>
-<p>eliminar-planta works!</p>
+<h2 mat-dialog-title>Eliminar planta</h2>
+<mat-dialog-content>¿Seguro que deseas eliminar la planta seleccionada?</mat-dialog-content>
+<mat-dialog-actions> 
+<button mat-button mat-dialog-close mat-dialog-close="true">Eliminar</button>
+<button mat-button mat-dialog-close>Cancelar</button>
+<mat-dialog-actions>
+

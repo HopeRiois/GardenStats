@@ -1,8 +1,32 @@
-<h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click) = "agregarcrecimiento()">Agregar crecimiento</button>
-  <button mat-menu-item (click) = "modificarcrecimiento()">Modificar crecimiento</button>
-  <button mat-menu-item (click) = "eliminarcrecimiento()">Eliminar crecimiento</button>
-</mat-menu>
-<p>editar-crecimiento works!</p>
+<h2>Editar registro</h2>
+<div mat-dialog-content>
+  <p>Escriba el ID del registro a modificar</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: 1</mat-label>
+    <input matInput name="id" 
+                type="number"
+                placeholder="ID">
+  </mat-form-field>
+</div>
+<div mat-dialog-content>
+  <p>Escriba nuevo valor del registro</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: tomato</mat-label>
+    <input matInput name="valor" 
+                type="number"
+                placeholder="valor">
+  </mat-form-field>
+</div>
+<div mat-dialog-content>
+  <p>Nueva fecha del registro</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Ej: 07/10/2021</mat-label>
+    <input matInput name="nombre" 
+                type="date"
+                placeholder="Nombre">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close="true">Editar</button>
+  <button mat-button mat-dialog-close>Cancelar</button>
+</div>

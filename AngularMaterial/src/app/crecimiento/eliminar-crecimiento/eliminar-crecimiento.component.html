@@ -1,8 +1,8 @@
-<h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click) = "agregarcrecimiento()">Agregar crecimiento</button>
-  <button mat-menu-item (click) = "modificarcrecimiento()">Modificar crecimiento</button>
-  <button mat-menu-item (click) = "eliminarcrecimiento()">Eliminar crecimiento</button>
-</mat-menu>
-<p>eliminar-crecimiento works!</p>
+<h2 mat-dialog-title>Eliminar registro</h2>
+<mat-dialog-content>¿Seguro que deseas eliminar el registro seleccionada?</mat-dialog-content>
+<mat-dialog-actions> 
+<button mat-button mat-dialog-close mat-dialog-close="true">Eliminar</button>
+<button mat-button mat-dialog-close>Cancelar</button>
+<mat-dialog-actions>
+
+

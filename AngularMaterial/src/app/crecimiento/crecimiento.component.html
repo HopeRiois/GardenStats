@@ -1,10 +1,5 @@
 <h1></h1>
-<button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click) = "agregarcrecimiento()">Agregar crecimiento</button>
-  <button mat-menu-item (click) = "modificarcrecimiento()">Modificar crecimiento</button>
-  <button mat-menu-item (click) = "eliminarcrecimiento()">Eliminar crecimiento</button>
-</mat-menu>
+<button mat-raised-button (click) = "agregarcrecimiento()">Agregar crecimiento</button>
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
@@ -19,31 +14,17 @@
 				<th>Tamaño registrado</th>
 			</tr>
 		</thead>
-        <tbody>
-			<tr>
-				<td>1</td>
-				<td>1</td>
-				<td>Tomate</td>
-				<td>5</td>
+                <tbody>
+			<tr *ngFor="let item of collection.data">
+				<td>{{item.ID_crecimiento}}</td>
+				<td>{{item.ID_planta}}</td>
+				<td>{{item.Nombre}}</td>
+				<td>{{item.Medida}}</td>
 				<td>
                     <button  (click)="modificarcrecimiento()" class="btn btn-info">
 		                <i class="material-icons">edit</i>
 	                </button>
-                    <button (click)="eliminarcrecimiento()" class="btn btn-info" style="margin-left: 50px;">
-		                <i class="material-icons">remove</i>
-	                </button>
-				</td>
-			</tr>
-      <tr>
-				<td>2</td>
-				<td>1</td>
-				<td>Tomate</td>
-				<td>7</td>
-				<td>
-                    <button  (click)="modificarcrecimiento()" class="btn btn-info">
-		                <i class="material-icons">edit</i>
-	                </button>
-                    <button (click)="eliminarcrecimiento()" class="btn btn-info" style="margin-left: 50px;">
+                    <button (click)="eliminarcrecimiento(item)" class="btn btn-info" style="margin-left: 50px;">
 		                <i class="material-icons">remove</i>
 	                </button>
 				</td>

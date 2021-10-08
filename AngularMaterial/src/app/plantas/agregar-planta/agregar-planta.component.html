@@ -1,23 +1,21 @@
+<form [formGroup]="plantasForm">
 <h2>Agregar planta</h2>
 <div mat-dialog-content>
   <p>Escriba el ID de la planta</p>
   <mat-form-field appearance="fill">
     <mat-label>Ej: 1</mat-label>
-    <input matInput name="id" 
-                type="number"
-                placeholder="ID">
+    <input matInput formControlName="ID_planta">
   </mat-form-field>
 </div>
 <div mat-dialog-content>
   <p>Escriba el nombre de la planta a agregar</p>
   <mat-form-field appearance="fill">
     <mat-label>Ej: tomato</mat-label>
-    <input matInput name="nombre" 
-                type="text"
-                placeholder="Nombre">
+    <input matInput formControlName="Nombre">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button mat-dialog-close="true">Agregar</button>
-  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button (click)="closedialog()">Agregar</button>
+  <button mat-button mat-dialog-close="false">Cancelar</button>
 </div>
+</form>

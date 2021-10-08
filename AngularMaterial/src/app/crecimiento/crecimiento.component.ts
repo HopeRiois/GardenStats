@@ -13,6 +13,9 @@ import { EliminarCrecimientoComponent } from './eliminar-crecimiento/eliminar-cr
 export class CrecimientoComponent {
 
   collection = {count:4, data:[] as any}
+  ID_planta: number | undefined;
+  Medida: string | undefined;
+  Fecha: Date | undefined;
 
   constructor(private router:Router,public dialog: MatDialog){}
   ngOnInit(): void {
@@ -22,7 +25,8 @@ export class CrecimientoComponent {
           ID_crecimiento: i,
           ID_planta: 1,
           Nombre: "Tomato",
-          Medida: (i*3)+2      
+          Medida: (i*3)+2,
+          Fecha: "07/10/2021"      
     }      
         )
     }
@@ -30,7 +34,16 @@ export class CrecimientoComponent {
   }
 ;
   agregarcrecimiento(){
-    this.dialog.open(AgregarCrecimientoComponent);
+    const dialogRef= this.dialog.open(AgregarCrecimientoComponent, {
+      data: {ID_planta: this.ID_planta, Medida: this.Medida, Fecha: this.Fecha}});
+    
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(result);
+        if(result.ID_planta){
+          this.collection.data.push(result)
+        }
+        
+      });
   }
   modificarcrecimiento(){
     this.dialog.open(EditarCrecimientoComponent);

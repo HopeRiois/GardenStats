@@ -19,6 +19,7 @@ import { EditarCrecimientoComponent } from './crecimiento/editar-crecimiento/edi
 import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento/eliminar-crecimiento.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     MaterialModule,
     MatFormFieldModule,
-    MatDialogModule 
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

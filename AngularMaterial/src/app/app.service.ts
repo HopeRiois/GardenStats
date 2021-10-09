@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Planta } from './planta';
+import { Planta } from './Modelo/planta';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
+
   baseUrl = environment.baseUrl
+  Url='http://localhost:8080/backend/Planta';
 
   constructor(private http: HttpClient) { }
 
   getPlantas(){
-    return this.http.get(`${this.baseUrl}/getAll.php`);
+    return this.http.get<Planta[]>(this.Url);
   }
 
   getPlanta(id: string | number){

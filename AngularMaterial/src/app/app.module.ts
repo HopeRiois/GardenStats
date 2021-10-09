@@ -20,6 +20,8 @@ import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppService } from './app.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -48,9 +50,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     MatFormFieldModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

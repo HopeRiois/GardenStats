@@ -16,16 +16,16 @@
 			</tr>
 		</thead>
         <tbody>
-			<tr *ngFor="let item of collection.data">
-				<td>{{item.ID_planta}}</td>
-				<td>{{item.Nombre}}</td>
-				<td>{{item.Regar}}</td>
-				<td>{{item.Luz}}</td>
+			<tr *ngFor="let planta of plantas">
+				<td>{{planta.ID_planta}}</td>
+				<td>{{planta.Nombre}}</td>
+				<td>{{planta.Regar}}</td>
+				<td>{{planta.Luz}}</td>
 				<td>
                     <button  (click)="modificarplanta()" class="btn btn-info">
 		                <i class="material-icons">edit</i>
 	                </button>
-                    <button (click)="eliminarplanta(item)" class="btn btn-info" style="margin-left: 50px;">
+                    <button  class="btn btn-info" style="margin-left: 50px;">
 		                <i class="material-icons">remove</i>
 	                </button>
 				</td>

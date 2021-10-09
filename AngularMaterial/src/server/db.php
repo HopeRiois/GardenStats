@@ -1,6 +1,5 @@
-?>
 <?php
-$contraseña = "12345678";
+$contraseña = "";
 $usuario= "root";
 $nombre_base_de_datos= "base";
 

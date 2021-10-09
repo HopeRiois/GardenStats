@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost/80",
+  baseUrl: "http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=base",
 };
 
 /*

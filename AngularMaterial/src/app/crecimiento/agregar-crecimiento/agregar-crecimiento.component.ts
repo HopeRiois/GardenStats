@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,20 +10,20 @@ import { Router } from '@angular/router';
 })
 export class AgregarCrecimientoComponent{
 
-  constructor(private router:Router){}ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  crecimientoForm: FormGroup;
+  constructor(private router:Router,  @Inject(MAT_DIALOG_DATA) public data: any, private fb: FormBuilder, public dialogRef: MatDialogRef<AgregarCrecimientoComponent>){
+    this.crecimientoForm= this.fb.group({
+      ID_crecimiento: 11,
+      ID_planta: [this.data.ID_planta,Validators.required],
+      Nombre: "Pepino",
+      Registro: [this.data.Registro,Validators.required],
+      Fecha: [this.data.Fecha,Validators.required]
+    });
   }
-;
-  agregarcrecimiento(){
-    this.router.navigate(["agregarcrecimiento"])
+  
+  closedialog(){
+    this.dialogRef.close(this.crecimientoForm.value)
   }
-  modificarcrecimiento(){
-    this.router.navigate(["editarcrecimiento"])
-  }
-  eliminarcrecimiento(){
-    this.router.navigate(["eliminarcrecimiento"])
-  }
-  crecimiento(){
-    this.router.navigate(["crecimiento"])
-  }
+
+  ngOnInit(): void {};
 }

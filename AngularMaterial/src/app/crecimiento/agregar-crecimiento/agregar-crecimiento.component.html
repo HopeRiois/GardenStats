@@ -1,32 +1,28 @@
+<form [formGroup]="crecimientoForm">
 <h2>Registrar crecimiento</h2>
 <div mat-dialog-content>
   <p>Escriba el ID de la planta</p>
   <mat-form-field appearance="fill">
     <mat-label>Ej: 1</mat-label>
-    <input matInput name="id" 
-                type="number"
-                placeholder="ID">
+    <input matInput formControlName="ID_planta" type="number">
   </mat-form-field>
 </div>
 <div mat-dialog-content>
   <p>Escriba valor del registro en cm</p>
   <mat-form-field appearance="fill">
     <mat-label>Ej: 20</mat-label>
-    <input matInput name="valor" 
-                type="number"
-                placeholder="valor">
+    <input matInput formControlName="Registro">
   </mat-form-field>
 </div>
 <div mat-dialog-content>
   <p>Fecha del registro</p>
   <mat-form-field appearance="fill">
     <mat-label>Ej: 07/10/2021</mat-label>
-    <input matInput name="nombre" 
-                type="date"
-                placeholder="Nombre">
+    <input matInput formControlName="Fecha" type="date">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button mat-dialog-close="true">Agregar</button>
-  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button (click)="closedialog()">Agregar</button>
+  <button mat-button mat-dialog-close="false">Cancelar</button>
 </div>
+</form>

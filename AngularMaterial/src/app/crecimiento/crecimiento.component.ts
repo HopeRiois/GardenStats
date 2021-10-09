@@ -14,7 +14,7 @@ export class CrecimientoComponent {
 
   collection = {count:4, data:[] as any}
   ID_planta: number | undefined;
-  Medida: string | undefined;
+  Registro: string | undefined;
   Fecha: Date | undefined;
 
   constructor(private router:Router,public dialog: MatDialog){}
@@ -25,8 +25,8 @@ export class CrecimientoComponent {
           ID_crecimiento: i,
           ID_planta: 1,
           Nombre: "Tomato",
-          Medida: (i*3)+2,
-          Fecha: "07/10/2021"      
+          Registro: (i*3)+2,
+          Fecha: "2021-10-07"      
     }      
         )
     }
@@ -35,7 +35,7 @@ export class CrecimientoComponent {
 ;
   agregarcrecimiento(){
     const dialogRef= this.dialog.open(AgregarCrecimientoComponent, {
-      data: {ID_planta: this.ID_planta, Medida: this.Medida, Fecha: this.Fecha}});
+      data: {ID_planta: this.ID_planta, Registro: this.Registro, Fecha: this.Fecha}});
     
       dialogRef.afterClosed().subscribe(result => {
         console.log(result);

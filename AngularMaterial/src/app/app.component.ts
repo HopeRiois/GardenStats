@@ -1,15 +1,25 @@
+import { ProviderAst } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [AppService],
 })
 export class AppComponent {
-  title = 'AngularMaterial';
+  title = 'GardenStats';
   opened = false;
-  constructor(private router:Router){};
+  constructor(private router:Router, private dataSvc: AppService){};
+
+  ngOnInIt(){
+    this.dataSvc.getAll().subscribe(res => {
+      console.log(res)
+    })
+  }
+
   plantas(){
     this.router.navigate(["plantas"])
   }

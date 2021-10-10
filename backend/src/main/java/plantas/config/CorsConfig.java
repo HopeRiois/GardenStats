@@ -1,28 +1,14 @@
-package com.GardenStats.backend;
+package plantas.config;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge= 3600)
+@Configuration
+public class CorsConfig {
 
-@RestController
-@RequestMapping({"/plantas"})
-public class Controlador {
-	@Autowired
-	PlantaService service;
-	
-	public List<Planta>listar(){
-		return service.listar();
-	}
-
-	@Bean
+    @Bean
     public WebMvcConfigurer corsConfigurer(){
         return new WebMvcConfigurer(){
             @Override
@@ -35,5 +21,3 @@ public class Controlador {
         };
     }
 }
-
-

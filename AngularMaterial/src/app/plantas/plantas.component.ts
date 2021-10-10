@@ -23,7 +23,7 @@ export class PlantasComponent implements OnInit{
   constructor(private router:Router,public dialog: MatDialog, private service:AppService) {}
 
   ngOnInit(): void {
-    this.service.getPlantas().subscribe(data=>{this.plantas=data;})
+    this.service.getAll().subscribe(data=>{this.plantas=data;})
 
 
     for (var i=0;i<this.collection.count;i++){

@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Planta } from './Modelo/planta';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+import { Planta } from './Modelo/planta';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +14,10 @@ export class AppService {
   Url='http://localhost:8080/backend/Planta';
 
   constructor(private http: HttpClient) { }
+
+  getAll():Observable<any>{
+    return this.http.get<any>('http://localhost:8080/backend/Planta')
+  }
 
   getPlantas(){
     return this.http.get<Planta[]>(this.Url);
@@ -33,4 +39,6 @@ export class AppService {
   {
     return this.http.put(`${this.baseUrl}/update.php`, planta);
   }
+
+  
 }

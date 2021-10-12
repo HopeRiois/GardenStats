@@ -5,7 +5,7 @@ import { AgregarPlantaComponent } from './agregar-planta/agregar-planta.componen
 import { EditarPlantaComponent } from './editar-planta/editar-planta.component';
 import { EliminarPlantaComponent } from './eliminar-planta/eliminar-planta.component';
 import { AppService } from '../app.service';
-import { Planta } from '../Modelo/planta';
+import { Planta } from '../Modelo/Planta';
 
 @Component({
   selector: 'app-plantas',
@@ -23,8 +23,7 @@ export class PlantasComponent implements OnInit{
   constructor(private router:Router,public dialog: MatDialog, private service:AppService) {}
 
   ngOnInit(): void {
-    this.service.getAll().subscribe(data=>{this.plantas=data;})
-
+    this.service.getPlantas().subscribe(data=>{this.plantas=data; console.log("try"); console.log(data);})
 
     for (var i=0;i<this.collection.count;i++){
       this.collection.data.push(

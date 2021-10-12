@@ -19,9 +19,9 @@ public class Planta {
 	@Column
 	private String Nombre;
 	@Column
-	private boolean Regar;
+	private int Regar;
 	@Column
-	private boolean Luz;
+	private int Luz;
 	
 	public int getId() {
 		return ID_planta;
@@ -39,19 +39,19 @@ public class Planta {
 		this.Nombre=Nombre;
 	}
 	
-	public boolean getRegar() {
+	public int getRegar() {
 		return Regar;
 	}
 	
-	public void setRegar(boolean Regar) {
+	public void setRegar(int Regar) {
 		this.Regar=Regar;
 	}
 	
-	public boolean getLuz() {
+	public int getLuz() {
 		return Luz;
 	}
 	
-	public void setLuz(boolean Luz) {
+	public void setLuz(int Luz) {
 		this.Luz=Luz;
 	}
 	

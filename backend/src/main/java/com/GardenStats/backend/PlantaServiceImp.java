@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Service
 public class PlantaServiceImp implements PlantaService{
@@ -15,7 +16,10 @@ public class PlantaServiceImp implements PlantaService{
 		// TODO Auto-generated method stub
 		return repositorio.findAll();
 	}
-
+	
+	@CrossOrigin
+	(origins = "http://localhost:4200/ANGULARMATERIAL")
+	
 	@Override
 	public Planta listarId(int ID_planta) {
 		// TODO Auto-generated method stub

@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./agregar-crecimiento.component.css']
 })
 export class AgregarCrecimientoComponent{
-
+  
   crecimientoForm: FormGroup;
   constructor(private router:Router,  @Inject(MAT_DIALOG_DATA) public data: any, private fb: FormBuilder, public dialogRef: MatDialogRef<AgregarCrecimientoComponent>){
     this.crecimientoForm= this.fb.group({
-      ID_crecimiento: 11,
+      ID_crecimiento: 7,
       ID_planta: [this.data.ID_planta,Validators.required],
-      Nombre: "Pepino",
+      Nombre: "Platano",
       Registro: [this.data.Registro,Validators.required],
       Fecha: [this.data.Fecha,Validators.required]
     });

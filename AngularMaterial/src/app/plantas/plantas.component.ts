@@ -20,23 +20,45 @@ export class PlantasComponent implements OnInit{
   Nombre: string | undefined;
   plantas: Planta[] | undefined;
 
-  constructor(private router:Router,public dialog: MatDialog, private service:AppService) {}
+  constructor(private router:Router,public dialog: MatDialog, private service:AppService) {
+
+    this.collection.data.push(
+      {
+        ID_planta: 1,
+        Nombre: "Tomate",
+        Regar: "Si",
+        Luz: "No"      
+  })
+  this.collection.data.push(
+    {
+      ID_planta: 2,
+      Nombre: "Pepino",
+      Regar: "Si",
+      Luz: "Si"      
+})
+
+this.collection.data.push(
+  {
+    ID_planta: 3,
+    Nombre: "Jazmin",
+    Regar: "No",
+    Luz: "Si"      
+})
+
+this.collection.data.push(
+  {
+    ID_planta: 4,
+    Nombre: "Platano",
+    Regar: "No",
+    Luz: "No"      
+})
+  }
 
   ngOnInit(): void {
     this.service.getPlantas().subscribe(data=>{this.plantas=data; console.log("try"); console.log(data);})
+    };
 
-    for (var i=0;i<this.collection.count;i++){
-      this.collection.data.push(
-        {
-          ID_planta: i,
-          Nombre: "nombre",
-          Regar: "No",
-          Luz: "No"      
-    }      
-        )
-    }
-  }
-;
+
   agregarplanta(){
     const dialogRef= this.dialog.open(AgregarPlantaComponent, {
       data: {ID_planta: this.ID_planta, Nombre: this.Nombre}});
@@ -46,7 +68,8 @@ export class PlantasComponent implements OnInit{
         if(result.ID_planta){
           this.collection.data.push(result)
         }
-        
+        this.collection.count+=1;
+        console.log(this.collection.count)
       });
 
   }
@@ -55,11 +78,12 @@ export class PlantasComponent implements OnInit{
     this.dialog.open(EditarPlantaComponent);
   }
 
-  eliminarplanta(item:any):void{
+  eliminarplanta(item: any):void{
     let dialogRef= this.dialog.open(EliminarPlantaComponent);
     dialogRef.afterClosed().subscribe((confirmado: Boolean) => {
       if (confirmado) {
-        this.collection.data.pop(item)
+          this.collection.data.pop(item)
+        
       } 
   });
 

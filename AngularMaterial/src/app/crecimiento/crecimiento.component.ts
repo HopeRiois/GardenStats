@@ -17,21 +17,67 @@ export class CrecimientoComponent {
   Registro: string | undefined;
   Fecha: Date | undefined;
 
-  constructor(private router:Router,public dialog: MatDialog){}
-  ngOnInit(): void {
-    for (var i=0;i<this.collection.count;i++){
+  constructor(private router:Router,public dialog: MatDialog){
+
+    this.collection.data.push(
+      {
+        ID_crecimiento: 1,
+        ID_planta: 1,
+        Nombre: "Tomate",
+        Registro: 5,
+        Fecha: "2021-10-07"      
+  }      
+      )
+
       this.collection.data.push(
         {
-          ID_crecimiento: i,
-          ID_planta: 1,
-          Nombre: "Tomato",
-          Registro: (i*3)+2,
-          Fecha: "2021-10-07"      
+          ID_crecimiento: 2,
+          ID_planta: 2,
+          Nombre: "Pepino",
+          Registro: 4,
+          Fecha: "2021-9-07"      
     }      
         )
-    }
-    throw new Error('Method not implemented.');
+        this.collection.data.push(
+          {
+            ID_crecimiento: 3,
+            ID_planta: 2,
+            Nombre: "Pepino",
+            Registro: 6,
+            Fecha: "2021-10-07"      
+      }      
+          )
+          this.collection.data.push(
+            {
+              ID_crecimiento: 4,
+              ID_planta: 3,
+              Nombre: "Jazmin",
+              Registro: 2,
+              Fecha: "2021-08-07"      
+        }      
+            )
+            this.collection.data.push(
+              {
+                ID_crecimiento: 5,
+                ID_planta: 3,
+                Nombre: "Jazmin",
+                Registro: 3,
+                Fecha: "2021-09-07"      
+          }      
+              )
+              this.collection.data.push(
+                {
+                  ID_crecimiento: 6,
+                  ID_planta: 3,
+                  Nombre: "Jazmin",
+                  Registro: 5,
+                  Fecha: "2021-10-07"      
+            }      
+                )
+    this.collection.count=5;
+                  
   }
+  ngOnInit(): void { }
 ;
   agregarcrecimiento(){
     const dialogRef= this.dialog.open(AgregarCrecimientoComponent, {

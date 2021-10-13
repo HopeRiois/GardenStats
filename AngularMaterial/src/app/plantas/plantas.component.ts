@@ -6,6 +6,7 @@ import { EditarPlantaComponent } from './editar-planta/editar-planta.component';
 import { EliminarPlantaComponent } from './eliminar-planta/eliminar-planta.component';
 import { AppService } from '../app.service';
 import { Planta } from '../Modelo/Planta';
+import { ComprobarComponent } from './comprobar/comprobar.component';
 
 @Component({
   selector: 'app-plantas',
@@ -44,14 +45,6 @@ this.collection.data.push(
     Regar: "No",
     Luz: "Si"      
 })
-
-this.collection.data.push(
-  {
-    ID_planta: 4,
-    Nombre: "Platano",
-    Regar: "No",
-    Luz: "No"      
-})
   }
 
   ngOnInit(): void {
@@ -89,4 +82,7 @@ this.collection.data.push(
 
 }
 
+comprobarplanta(){
+  this.dialog.open(ComprobarComponent);
+}
 }

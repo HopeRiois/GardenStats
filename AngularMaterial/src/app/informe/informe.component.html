@@ -1,1 +1,21 @@
-<p>informe works!</p>
+<button mat-raised-button [matMenuTriggerFor]="menu">Graficas</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="temperatura()">Temperatura</button>
+  <button mat-menu-item (click)="humedad()">Humedad</button>
+    <button mat-menu-item (click)="humedad_suelo()">Humedad_suelo</button>
+  <button mat-menu-item (click)="luz()">Luz</button>
+</mat-menu>
+  <h1 style='text-align: center'> Grafica estadistica para las plantas </h1>
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [dataLabels]="chartOptions.dataLabels"
+    [plotOptions]="chartOptions.plotOptions"
+    [yaxis]="chartOptions.yaxis"
+    [legend]="chartOptions.legend"
+    [fill]="chartOptions.fill"
+    [stroke]="chartOptions.stroke"
+    [tooltip]="chartOptions.tooltip"
+    [xaxis]="chartOptions.xaxis"
+    [title]="chartOptions.title"
+  ></apx-chart>

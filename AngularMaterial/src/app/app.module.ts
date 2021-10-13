@@ -22,7 +22,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { ComprobarComponent } from './plantas/comprobar/comprobar.component';
+ 
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     AgregarCrecimientoComponent,
     EditarCrecimientoComponent,
     EliminarCrecimientoComponent,
+    ComprobarComponent,
   ],
   entryComponents: [
     EliminarPlantaComponent,
@@ -51,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatDialogModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgApexchartsModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

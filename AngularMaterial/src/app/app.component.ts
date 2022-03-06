@@ -35,4 +35,7 @@ export class AppComponent {
   info(){
     this.router.navigate(["info"])
   }
+  login(){
+    this.router.navigate(["login"])
+  }
 }

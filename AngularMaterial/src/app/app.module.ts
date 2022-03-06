@@ -24,6 +24,7 @@ import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ComprobarComponent } from './plantas/comprobar/comprobar.component';
+import { LoginComponent } from './login/login.component';
  
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ComprobarComponent } from './plantas/comprobar/comprobar.component';
     EditarCrecimientoComponent,
     EliminarCrecimientoComponent,
     ComprobarComponent,
+    LoginComponent,
   ],
   entryComponents: [
     EliminarPlantaComponent,

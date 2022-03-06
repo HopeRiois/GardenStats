@@ -11,6 +11,7 @@ import { EliminarPlantaComponent } from './plantas/eliminar-planta/eliminar-plan
 import { EditarCrecimientoComponent } from './crecimiento/editar-crecimiento/editar-crecimiento.component';
 import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento/eliminar-crecimiento.component';
 import { AgregarCrecimientoComponent } from './crecimiento/agregar-crecimiento/agregar-crecimiento.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -47,9 +48,12 @@ const routes: Routes = [
     path: 'eliminarcrecimiento',component:EliminarCrecimientoComponent
   },
   {
+    path: 'login',component:LoginComponent
+  },
+
+  {
     path: "", redirectTo: "/home", pathMatch: "full"
   }, 
-
   {
     path:"**", redirectTo: "/home"
   }

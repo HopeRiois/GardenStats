@@ -9,6 +9,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 const MaterialComponents = [
@@ -21,7 +24,10 @@ const MaterialComponents = [
   MatToolbarModule,
   MatTableModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatChipsModule
 ]
 
 @NgModule({
@@ -36,7 +42,10 @@ const MaterialComponents = [
     MatToolbarModule,
     MatTableModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatChipsModule
   ],
   exports:[
     MatButtonModule,
@@ -48,7 +57,10 @@ const MaterialComponents = [
     MatToolbarModule,
     MatTableModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule { }

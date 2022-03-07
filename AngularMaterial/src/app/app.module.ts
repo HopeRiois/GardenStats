@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ComprobarComponent } from './plantas/comprobar/comprobar.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
  
 
 @NgModule({
@@ -43,6 +44,7 @@ import { LoginComponent } from './login/login.component';
     EliminarCrecimientoComponent,
     ComprobarComponent,
     LoginComponent,
+    SignupComponent,
   ],
   entryComponents: [
     EliminarPlantaComponent,

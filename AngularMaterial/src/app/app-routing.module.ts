@@ -12,6 +12,7 @@ import { EditarCrecimientoComponent } from './crecimiento/editar-crecimiento/edi
 import { EliminarCrecimientoComponent } from './crecimiento/eliminar-crecimiento/eliminar-crecimiento.component';
 import { AgregarCrecimientoComponent } from './crecimiento/agregar-crecimiento/agregar-crecimiento.component';
 import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   },
   {
     path: 'login',component:LoginComponent
+  },
+
+  {
+    path: 'signup',component:SignupComponent
   },
 
   {

@@ -18,23 +18,19 @@ CREATE TABLE IF NOT EXISTS usuario(
 );
 
 CREATE TABLE IF NOT EXISTS planta(
-	ID_planta SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    ID_usuario SMALLINT NOT NULL,
-	Nombre VARCHAR(20) NOT NULL,
-	Regar BOOLEAN NOT NULL,
-	Luz BOOLEAN NOT NULL
+		ID_planta SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		ID_usuario SMALLINT NOT NULL,
+		Nombre VARCHAR(20) NOT NULL,
+		Regar BOOLEAN NOT NULL,
+		Luz BOOLEAN NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS lecturaSensores(
+CREATE TABLE IF NOT EXISTS lectura_sensores(
 	ID_lectura SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	ID_planta SMALLINT NOT NULL,
 	Temperatura VARCHAR(10) NOT NULL,
-	Humedad VARCHAR(10) NOT NULL,
-	Humedad_s1 VARCHAR(10) NOT NULL,
-	Humedad_s2 VARCHAR(10) NOT NULL,
-	Humedad_s3 VARCHAR(10) NOT NULL,
-	Humedad_s4 VARCHAR(10) NOT NULL,
-	Humedad_prom VARCHAR(10) NOT NULL,
+	Humedad_ambiente VARCHAR(10) NOT NULL,
+	Humedad_suelo VARCHAR(10) NOT NULL,
 	Luz VARCHAR(10) NOT NULL,
 	Fecha_lectura VARCHAR(25) NOT NULL
 );
@@ -55,13 +51,13 @@ GRANT ALL PRIVILEGES ON *.* TO 'admin'@'172.17.0.1' WITH GRANT OPTION;
 select * From planta;
 select * From usuario;
 select * From crecimiento;
-select * From lecturaSensores;
+select * From lectura_sensores;
 
 #Drops tables
 DROP table planta;
 DROP table usuario;
 DROP table crecimiento;
-DROP table lecturaSensores;
+DROP table lectura_sensores;
 
 ## Referencia de foreign key
 ALTER TABLE planta ADD FOREIGN KEY (ID_usuario) REFERENCES usuario(ID_usuario);
@@ -112,3 +108,4 @@ INSERT INTO crecimiento values(null,10,"10","2022-02-18");
 INSERT INTO crecimiento values(null,11,"10","2021-09-18");
 INSERT INTO crecimiento values(null,11,"16","2021-12-18");
 INSERT INTO crecimiento values(null,11,"25","2022-02-18");
+

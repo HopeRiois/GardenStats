@@ -11,32 +11,27 @@ import { Planta } from './Modelo/Planta';
 export class AppService {
 
   baseUrl = environment.baseUrl
-  Url='http://localhost:8080/backend/planta';
+  Url='http://localhost:8090/gardenStats/plantas';
 
   constructor(private http: HttpClient) { }
 
-  getAll():Observable<any>{
-    return this.http.get<any>('http://localhost:8080/backend/planta')
+  ListarP():Observable<any>{
+    return this.http.get<any>('http://localhost:8080/gardenStats/plantas')
   }
 
-  getPlantas(){
-    console.log("success")
-    return this.http.get<Planta[]>(this.Url);
-  }
-
-  getPlanta(id: string | number){
+  ObtenerUnoP(id: string | number){
     return this.http.get(`${this.baseUrl}/get.php?idPlanta=${id}`);
   }
 
-  addPlanta(planta: Planta){
+  AgregarP(planta: Planta){
     return this.http.post(`${this.baseUrl}/post.php`, planta);
   }
 
-  deletePlanta(planta: Planta){
+  EliminarP(planta: Planta){
     return this.http.delete(`${this.baseUrl}/delete.php?idPlanta=${planta.ID_planta}`);
   }
 
-  updatePlanta(planta: Planta)
+  EditP(planta: Planta)
   {
     return this.http.put(`${this.baseUrl}/update.php`, planta);
   }

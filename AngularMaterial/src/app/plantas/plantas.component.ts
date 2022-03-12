@@ -48,7 +48,7 @@ this.collection.data.push(
   }
 
   ngOnInit(): void {
-    this.service.getPlantas().subscribe(data=>{this.plantas=data; console.log("try"); console.log(data);})
+    this.service.ListarP().subscribe(data=>{this.plantas=data; console.log("try"); console.log(data);})
     };
 
 

@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private router:Router, private dataSvc: AppService){};
 
   ngOnInIt(){
-    this.dataSvc.getAll().subscribe(res => {
+    this.dataSvc.ListarP().subscribe(res => {
       console.log(res)
     })
   }

@@ -1,0 +1,18 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: gardenstats
+region: nyc
+services:
+- http_port: 80
+  image:
+    registry: alvarorios5
+    registry_type: DOCKER_HUB
+    repository: gardenstats
+    tag: latest
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: gardenstats
+  routes:
+  - path: /
+  source_dir: /
